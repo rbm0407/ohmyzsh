@@ -32,7 +32,7 @@
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
-CURRENT_BG='NONE'
+CURRENT_BG='blue'
 
 case ${SOLARIZED_THEME:-dark} in
     light) CURRENT_FG='white';;
@@ -204,7 +204,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment 39d $CURRENT_FG '%~'
+  prompt_segment $CURRENT_BG white '%~'
 }
 
 # Virtualenv: current working virtualenv
